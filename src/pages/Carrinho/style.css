@@ -1,0 +1,76 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: white;
+    font-family: sans-serif;
+}
+
+.textMenu{
+    margin-right: 10rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.excluirItemCarrinho {
+    background-color: rgb(162, 0, 0);
+    color: #fff;
+}
+
+.iconNavCarrinho {
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.containerSeuCarrinho {
+    color: #000;
+    max-width: 450px;
+}
+
+.containerSeuCarrinho h2 {
+    text-align: center;
+}
+
+.buttonCarrinhoComprar {
+    margin-top: 10px;
+    width: 100%;
+    padding: .5em;
+    border: none;
+    background-color: rgb(0, 255, 200);
+    border-radius: 6px;
+    transition: .35s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttonCarrinhoComprar:hover {
+    opacity: .7;
+}
+
+.buttonCarrinhoDesistir {
+    margin-top: 10px;
+    width: 100%;
+    padding: .5em;
+    border: none;
+    background-color: rgb(255, 0, 0);
+    border-radius: 6px;
+    transition: .35s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.buttonCarrinhoDesistir:hover {
+    opacity: .7;
+}
+
+.containerbutton {
+    margin-top: 10px
+}

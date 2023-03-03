@@ -1,0 +1,116 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Playsation 5",
+      "descricao": "Console da Sony com mídia fisica",
+      "preco": 45000,
+      "foto": "https://images.kabum.com.br/produtos/fotos/115737/console-sony-playstation-5_1603798015_g.jpg",
+      "categoria_id": 1
+    },
+    {
+      "id": 2,
+      "nome": "XBOX Series S",
+      "descricao": "Xbox com foco em 1080p",
+      "preco": 2600,
+      "foto": "https://images.kabum.com.br/produtos/fotos/128561/console-microsoft-xbox-series-s-500gb-branco-rrs-00006_1601067301_g.jpg",
+      "categoria_id": 1
+    },
+    {
+      "id": 3,
+      "nome": "XBOX Series X",
+      "descricao": "Xbox com foco em qualquer coisa",
+      "preco": 4500,
+      "foto": "https://images.kabum.com.br/produtos/fotos/128560/console-microsoft-xbox-series-x-1tb-preto-rrt-00006_1601067024_g.jpg",
+      "categoria_id": 1
+    },
+    {
+      "id": 4,
+      "nome": "Iphone 12",
+      "descricao": "Apple Iphone 128GB cor preta",
+      "preco": 5000,
+      "foto": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-black-select-2020?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1604343702000",
+      "categoria_id": 2
+    },
+    {
+      "id": 5,
+      "nome": "Galaxy S20+",
+      "descricao": "Samsung Galaxy S20+ com 256GB na cor azul",
+      "preco": 4800,
+      "foto": "https://sipolatti.vteximg.com.br/arquivos/ids/174518-550-570/SAMSUNG-GALAXY-S20-PLUS-Cloud-Blue.jpg?v=637227295037370000",
+      "categoria_id": 2
+    },
+    {
+      "id": 6,
+      "nome": "Galaxy S20 FE",
+      "descricao": "Samsung Galaxy Fan Edition 128GB",
+      "preco": 2500,
+      "foto": "https://a-static.mlcdn.com.br/1500x1500/smartphone-samsung-galaxy-s20-fe-128gb-cloud-navy-4g-6gb-ram-tela-65-cam-tripla-selfie-32mp/magazineluiza/155629800/0007bbdc665749ec107d860c3a4b8b2f.jpg",
+      "categoria_id": 2
+    },
+    {
+      "id": 7,
+      "nome": "Iphone 12 mini",
+      "descricao": "Apple Iphone mini 128GB cor preta",
+      "preco": 3800,
+      "foto": "https://www.techinn.com/f/13782/137821889/apple-iphone-12-mini-4gb-128gb-5.4.jpg",
+      "categoria_id": 2
+    },
+    {
+      "id": 8,
+      "nome": "Coca cola 600ml",
+      "descricao": "",
+      "preco": 7.5,
+      "foto": "https://www.clubeextra.com.br/img/uploads/1/18/12034018.jpg",
+      "categoria_id": 3
+    },
+    {
+      "id": 9,
+      "nome": "Chocolate Milka Oreo",
+      "descricao": "Chocolate recheado com creme de Oreo",
+      "preco": 12,
+      "foto": "https://m.media-amazon.com/images/I/61APYfE+uZL._AC_SL1200_.jpg",
+      "categoria_id": 3
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Video Games"
+    },
+    {
+      "id": 2,
+      "nome": "Smartphones"
+    },
+    {
+      "id": 3,
+      "nome": "Chocolates"
+    }
+  ],
+  "carrinho": [
+    {
+      "id": 4,
+      "nome": "Iphone 12",
+      "descricao": "Apple Iphone 128GB cor preta",
+      "preco": 5000,
+      "foto": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-black-select-2020?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1604343702000",
+      "categoria_id": 2
+    },
+    {
+      "id": 6,
+      "nome": "Galaxy S20 FE",
+      "descricao": "Samsung Galaxy Fan Edition 128GB",
+      "preco": 2500,
+      "foto": "https://a-static.mlcdn.com.br/1500x1500/smartphone-samsung-galaxy-s20-fe-128gb-cloud-navy-4g-6gb-ram-tela-65-cam-tripla-selfie-32mp/magazineluiza/155629800/0007bbdc665749ec107d860c3a4b8b2f.jpg",
+      "categoria_id": 2
+    },
+    {
+      "id": 9,
+      "nome": "Chocolate Milka Oreo",
+      "descricao": "Chocolate recheado com creme de Oreo",
+      "preco": 12,
+      "foto": "https://m.media-amazon.com/images/I/61APYfE+uZL._AC_SL1200_.jpg",
+      "categoria_id": 3
+    }
+  ]
+}
