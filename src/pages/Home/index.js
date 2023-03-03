@@ -71,7 +71,7 @@ function Home() {
               <button
                 className="action"
                 onClick={() => togglePostModal(item)}
-                style={{ backgroundColor: "#3583f6" }}
+                style={{ backgroundColor: "#000" }}
               >
                 <FiSearch color="#FFF" size={17} />
                 Detalhes
