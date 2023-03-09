@@ -1,49 +1,46 @@
+import axios from "axios";
 import "./style.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import { FaGreaterThan } from "react-icons/fa";
 import { BsCartFill } from "react-icons/bs";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 function Carrinho() {
   const [produto, setProduto] = useState([]);
-  const [comprarProduto, setComprarProduto] = useState(true);
 
-  useEffect(() => {
-    function loadApp() {
-      let produtos = "carrinho";
-      let url = `http://localhost:3000/carrinho`;
-      fetch(url)
-        .then((results) => results.json())
-        .then((exibejson) => {
-          setProduto(exibejson);
-        });
-    }
-    loadApp();
-  }, []);
-
-  function deleteItem(itemId) {
-    let response = axios.delete(`http://localhost:3000/carrinho/${itemId}`);
-    window.location.reload(true);
-      toast.success("Item removido do seu carrinho!")
+  function listAllItens() {
+    axios.get(`http://localhost:3000/carrinho`)
+      .then((exibejson) => {
+        setProduto(exibejson.data);
+      });
   }
 
-  function comprarItem() {}
+  useEffect(() => {
+    listAllItens();
+  }, []);
+
+  async function deleteItem(itemId) {
+    await axios.delete(`http://localhost:3000/carrinho/${itemId}`).then(function(response) {
+      toast.success("Item removido do seu carrinho!");
+    }) .catch(function(error) {
+      toast.error("Houve algum problema ao remover este item removido do seu carrinho!");
+    })
+    setTimeout(() => {
+      listAllItens();
+    }, 200);
+  }
 
   return (
     <div>
       <nav className="navbar">
-        <Link className="textMenu" to="/produtos">
+        <Link className="textMenu" to="/">
           Home
         </Link>
       </nav>
       <div className="containerSeuCarrinho">
         <h2>
-          <strong>
-            <FaGreaterThan size={18} />
-          </strong>{" "}
-          Carrinho
+            <FaGreaterThan size={18} /> Carrinho
         </h2>
       </div>
       <div className="container">
@@ -57,10 +54,7 @@ function Carrinho() {
               </div>
               <div className="containerbutton">
                 <Link to="/resumoCompra">
-                  <button
-                    className="buttonCarrinhoComprar"
-                    onClick={() => comprarItem(item.id)}
-                  >
+                  <button className="buttonCarrinhoComprar">
                     <BsCartFill className="iconNavCarrinho" />
                     Comprar
                   </button>

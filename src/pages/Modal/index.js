@@ -1,9 +1,11 @@
 import "./style.css";
+import { Link } from "react-router-dom";
 
 import { FiX } from "react-icons/fi";
 export default function Modal({ conteudo, close }) {
+
   return (
-    <div className="modal">
+    <div className="modal" onClick={close}>
       <div className="container">
         <button className="close" onClick={close}>
           <FiX size="23" color="#fff" />
@@ -22,10 +24,11 @@ export default function Modal({ conteudo, close }) {
               <span className="description">
               <a>{conteudo.descricao}</a>
               </span>
-
-              <span className="preco">
-                <a>R$ {conteudo.preco}</a>
-              </span>
+              <Link className="preco" to="/resumoCompra">
+                <span>
+                  <a>R$ {conteudo.preco}</a>
+                </span>
+              </Link>
             </div>
           </div>
         </div>

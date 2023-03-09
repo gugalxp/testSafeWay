@@ -8,7 +8,8 @@
     z-index: 99;
   }
   
-  .modal .container {
+  .modal 
+  .container {
     position: fixed;
     max-width: 600px;
     left: 0;
@@ -17,7 +18,6 @@
     margin: 0 auto;
     padding: 5em 2em;
     background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.6);
   }
   
   .close {
@@ -74,7 +74,9 @@
 
   .preco {
     background-color: green;
+    color: #fff;
     padding: 1em;
     border-radius: 5px;
+    text-decoration: none;
     text-align: center;
   }

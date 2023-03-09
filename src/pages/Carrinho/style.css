@@ -14,13 +14,14 @@ body{
 }
 
 .excluirItemCarrinho {
-    background-color: rgb(162, 0, 0);
+    background-color: rgb(243, 6, 6);
     color: #fff;
 }
 
 .iconNavCarrinho {
-    margin-right: 1em;
+    margin-right: .7em;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .containerSeuCarrinho {
@@ -40,11 +41,11 @@ body{
     background-color: rgb(0, 255, 200);
     border-radius: 6px;
     transition: .35s;
-    display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .buttonCarrinhoComprar:hover {
@@ -56,7 +57,7 @@ body{
     width: 100%;
     padding: .5em;
     border: none;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 46, 46);
     border-radius: 6px;
     transition: .35s;
     display: flex;
@@ -65,6 +66,7 @@ body{
     font-size: 16px;
     cursor: pointer;
     color: #fff;
+    font-weight: 600;
 }
 
 .buttonCarrinhoDesistir:hover {

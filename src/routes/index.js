@@ -7,10 +7,8 @@ function RoutesApp() {
     return(
         <Routes>
             <Route path="/" element={ <Home/> } />
-            <Route path="/produtos" element={ <Home/> } />
             <Route path="/carrinho" element={ <Carrinho/> }/>
             <Route path="/resumoCompra" element={ <ResumoCompra/> }/>
-
         </Routes>
     )
 }

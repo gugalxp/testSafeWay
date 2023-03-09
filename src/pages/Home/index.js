@@ -5,36 +5,38 @@ import { FaCartPlus, FaGreaterThan } from "react-icons/fa";
 import { BsCartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
-import Modal from '../Modal'
-import { toast } from 'react-toastify';
+import Modal from "../Modal";
+import { toast } from "react-toastify";
 
 function Home() {
   const [produto, setProduto] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [detail, setDetail] = useState(false);
 
+  async function listAllItens() {
+    await axios.get("http://localhost:3000/produtos").then((exibejson) => {
+      setProduto(exibejson.data);
+    });
+  }
 
   useEffect(() => {
-    function loadApp() {
-      let produtos = "carrinho";
-      let url = `http://localhost:3000/produtos`;
-      fetch(url)
-        .then((results) => results.json())
-        .then((exibejson) => {
-          setProduto(exibejson);
-        });
-    }
-    loadApp();
+    listAllItens();
   }, []);
 
   function adicionarItem(data) {
-    axios({
-      method: "post",
-      url: `http://localhost:3000/carrinho`,
+    const url = "http://localhost:3000/carrinho";
+    axios(url, {
+      method: "POST",
       data: data,
-    });
-    toast.success("Item adicionado ao seu carrinho!")
-
+    })
+      .then(function (response) {
+        toast.success("Item adicionado ao seu carrinho!");
+      })
+      .catch(function (error) {
+        toast.error(
+          "Houve algum problema ao adicionar este item! ERRO: " + error
+        );
+      });
   }
 
   function togglePostModal(item) {
@@ -68,14 +70,12 @@ function Home() {
                 <FaCartPlus className="iconButton" size={20} /> Adicionar ao
                 carrinho
               </button>
-              <button
-                className="action"
-                onClick={() => togglePostModal(item)}
-                style={{ backgroundColor: "#000" }}
-              >
-                <FiSearch color="#FFF" size={17} />
-                Detalhes
-              </button>
+              <div className="action">
+                <button onClick={() => togglePostModal(item)}>
+                  <FiSearch className="iconButton" color="#fff" size={18} />
+                  Mais detalhes
+                </button>
+              </div>
             </div>
           );
         })}

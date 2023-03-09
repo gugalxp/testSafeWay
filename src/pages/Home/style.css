@@ -8,7 +8,7 @@ body{
 }
 
 .adicionar {
-    margin-top: 40px;
+    margin-top: 10px;
     width: 100%;
     padding: .5em;
     border: none;
@@ -91,17 +91,25 @@ body{
 }
 
 .iconButton {
-    margin-right: 1em;
+    margin-right: .5em;
     cursor: pointer;
 }
 
 .action {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+}
+
+.action button {
+    color: #fff;
     display: flex;
     align-items: center;
-    margin-top: 1em;
-    justify-content: flex-start;
+    justify-content: center;
     border: none;
     padding: .6em;
-    color: #fff;
     cursor: pointer;
+    border-radius: 6px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
 }

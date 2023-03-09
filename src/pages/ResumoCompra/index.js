@@ -1,33 +1,27 @@
+import axios from "axios";
 import "./style.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import { FaGreaterThan } from "react-icons/fa";
-import { BsCartFill } from "react-icons/bs";
 
 function ResumoCompra() {
   const [produto, setProduto] = useState([]);
-  const [comprarProduto, setComprarProduto] = useState(true);
+
+  function listAllItens() {
+    axios.get(`http://localhost:3000/carrinho`)
+      .then((exibejson) => {
+        setProduto(exibejson.data);
+      });
+  }
 
   useEffect(() => {
-    function loadApp() {
-      let produtos = "carrinho";
-      let url = `http://localhost:3000/carrinho`;
-      fetch(url)
-        .then((results) => results.json())
-        .then((exibejson) => {
-          setProduto(exibejson);
-        });
-    }
-    loadApp();
+    listAllItens();
   }, []);
-
-  function comprarItem() {}
 
   return (
     <div>
       <nav className="navbar">
-        <Link className="textMenu" to="/produtos">
+        <Link className="textMenu" to="/">
           Home
         </Link>
       </nav>
